@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react'
-import Register from './components/register'
+import React, { useContext } from 'react'
+import Register from './components/Register'
 import Login from './components/Login'
 import Usercard from './components/Usercard'
 import { Mystore } from './Context/UserContext'
