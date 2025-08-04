@@ -36,11 +36,11 @@ const App = () => {
         <div className="flex flex-col md:flex-row gap-8">
           <div className="w-full md:w-1/2">
             {toggle 
-              ? <Login isDark={isDark} />
-              : <Register isDark={isDark} /> 
+              ? <Login />
+              : <Register /> 
             }
           </div>
-          <Usercard users={userData} isDark={isDark} />
+          <Usercard />
         </div> 
       </div>
     </div>

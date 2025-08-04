@@ -1,5 +1,9 @@
-const Usercard = ({ users, isDark }) => {
-    if (!users || users.length === 0) return (
+import { useContext } from "react";
+import { Mystore } from "../Context/UserContext";
+
+const Usercard = () => {
+    const {userData, isDark} = useContext(Mystore);
+    if (!userData || userData.length === 0) return (
         <div className={`w-full md:w-1/2 p-8 rounded-lg shadow-lg ${
             isDark ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'
         } transition-colors duration-300`}>
@@ -14,7 +18,7 @@ const Usercard = ({ users, isDark }) => {
         } transition-colors duration-300`}>
             <h2 className="text-2xl font-bold mb-6">Registered Users</h2>
             <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2">
-                {users.map((user, index) => (
+                {userData.map((user, index) => (
                     <div 
                         key={index} 
                         className={`rounded-lg p-6 ${
