@@ -69,8 +69,7 @@ function Login() {
                     Login
                 </button>
             </form>
-            <p className="mt-4 text-center text-sm text-gray-600">
-                Dont have an account? <span onClick={() => setToggel((prev) => !prev)} className="text-blue-500 cursor-pointer">Register here</span> </p>
+<p className={`mt-4 text-center text-sm ${isDark? "text-gray-400": "text-gray-600"}`}>                Dont have an account? <span onClick={() => setToggel((prev) => !prev)} className="text-blue-500 cursor-pointer">Register here</span> </p>
         </div>
     );
 }
